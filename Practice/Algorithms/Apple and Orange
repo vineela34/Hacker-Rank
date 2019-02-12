@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main(){
+    int s,t,a,b,m,n,d1,d2,ca = 0,co = 0;
+    scanf("%d%d%d%d%d%d",&s,&t,&a,&b,&m,&n);
+    for( int i = 0; i < m ; i++){
+        scanf("%d",&d1);
+        if((d1 >0) && (((a + d1) >= s) && ((a + d1) <= t )))
+            ca ++;
+    }
+    for(int i = 0; i < n ; i++){
+        scanf("%d",&d2);
+        if((d2 < 0) && (((b + d2) >= s) && ((b + d2) <= t)))
+            co++;
+    }
+    printf("%d\n%d",ca,co);
+}

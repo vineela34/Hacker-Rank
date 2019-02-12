@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+    int n, x, c[5] = {0};
+    scanf("%d",&n);
+    while(n--){
+        scanf("%d",&x);
+        c[x-1]++;
+    }
+    int y, max=c[0];
+    for(int i=1;i<5;i++){
+        if(c[i] > max){
+            max = c[i];
+            y = i;
+        }
+    }
+    printf("%d",y+1);
+}

@@ -1,0 +1,44 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+void solve(int year){
+    if(year >= 1919){
+        if((year % 400==0) || ((year % 4==0) && (year % 100 != 0))){
+            int date = 12;
+            printf("%d.09.%d",date,year);
+        }
+        else{
+             int date = 13;
+            printf("%d.09.%d",date,year);
+        }
+    }
+    if(year >= 1700 && year <= 1917){
+        if(year%4==0){
+            int date=12;
+            printf("%d.09.%d",date,year); 
+        }
+           else{
+             int date = 13;
+            printf("%d.09.%d",date,year);
+        }
+    }
+    if(year == 1918){
+          int date = (243)/9 -1;
+             printf("%d.09.%d",date,year);   
+      
+            
+    }
+}
+
+int main() {
+    int year; 
+    scanf("%d", &year);
+    int result_size;
+    solve(year);
+  
+    return 0;
+}

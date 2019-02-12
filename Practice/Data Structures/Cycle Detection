@@ -16,5 +16,6 @@ bool has_cycle(SinglyLinkedListNode* head) {
         sl.insert(head);
         head = head-> next;
     }
+    
     return false;
 }

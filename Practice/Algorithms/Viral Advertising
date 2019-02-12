@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int d;
+    scanf("%d",&d);
+    int a,m=5,t=0;
+    
+    while(d--){
+       a = m/2;
+        t += a;
+           
+        m = a*3;
+    }
+  printf("%d ",t);
+      
+    return 0;
+}
